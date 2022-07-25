@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://springframework.org/schema/context/spring-context.xsd" >
+ 
+	<bean name="emp1" class="com.springcore.collections.Emp">
+		<property name="name" value="Radhe" />
+		
+		<property name="phones">
+			<!-- <value>8112450800</value> if only one value present in list -->
+			<list>
+				<value>2134454543</value>
+				<value>21344545423</value>
+				<value>2134454543</value>
+				<value>2134454543</value>
+				<null />
+			</list>
+		</property>
+		
+		<property name="address">
+			<set>
+				<value>Delhi</value>
+				<value>Delhi1</value>
+				<value>Delhi2</value>
+				<value>Delhi3</value>
+			</set>
+		</property>
+		
+		<property name="courses">
+			<map>
+				<entry key="java" value="2months" />
+				<entry key="python" value="3months" />
+				<entry key="c" value="4months" />
+				<entry key="c#" value="5months" />
+			</map>
+		</property>
+	</bean>
+
+</beans>
