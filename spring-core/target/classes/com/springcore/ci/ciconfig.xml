@@ -32,10 +32,10 @@
 		<constructor-arg value="Ajay" />
 		<constructor-arg value="12" type="int" />
 		<constructor-arg ref="cer" />
+		<!--<constructor-arg >
+		<value>
+		<property>
 		
-		
-		<property name="list">
-			<!-- <value>8112450800</value> if only one value present in list -->
 			<list>
 				<value>2134454543</value>
 				<value>21344545423</value>
@@ -44,8 +44,20 @@
 				<null />
 			</list>
 		</property>
-		
-		
+		</value>
+		</constructor-arg> -->
 	</bean>
-
+	
+    <!-- Simple way without definning any functionality -->
+	<!-- <bean class ="com.springcore.ci.Addition" name="add" >
+		<constructor-arg value="12" />
+		<constructor-arg value="13" />
+	</bean>
+     -->
+     
+      <bean class ="com.springcore.ci.Addition" name="add" >
+		<constructor-arg value="12" type="int" index="0" />
+		<constructor-arg value="13" type="int" index="1" />
+	 </bean>
+     
 </beans>
