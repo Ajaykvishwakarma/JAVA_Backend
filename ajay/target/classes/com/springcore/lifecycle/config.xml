@@ -17,9 +17,5 @@
 	
 	
 	</bean>
-	
-	<bean class="com.springcore.lifecycle.Pepsi" name="p1">
-	<property name="price" value="50" />
-	</bean>
 
 </beans>
