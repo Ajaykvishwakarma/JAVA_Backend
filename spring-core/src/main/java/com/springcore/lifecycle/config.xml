@@ -21,5 +21,9 @@
 	<bean class="com.springcore.lifecycle.Pepsi" name="p1">
 	<property name="price" value="50" />
 	</bean>
+	
+	<bean class="com.springcore.lifecycle.Example" name="example">
+		<property name="subject" value="Math" />
+	</bean>
 
 </beans>
