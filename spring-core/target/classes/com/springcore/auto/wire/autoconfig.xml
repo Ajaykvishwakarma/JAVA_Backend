@@ -9,22 +9,19 @@
  http://www.springframework.org/schema/context
  http://springframework.org/schema/context/spring-context.xsd" >
  
- <context:annotation-config />
  
-	<bean class="com.springcore.lifecycle.Samosa" name="s1"
-	 init-method="init"  destroy-method="destroy">
-	
-	<property name="price" value="10" />
-	
-	
-	</bean>
-	
-	<bean class="com.springcore.lifecycle.Pepsi" name="p1">
-	<property name="price" value="50" />
-	</bean>
-	
-	<bean class="com.springcore.lifecycle.Example" name="example">
-		<property name="subject" value="Math" />
-	</bean>
-
+ <bean class="com.springcore.auto.wire.Address" name="address">
+ 	<property name="street" value="Temp Street" />
+ 	<property name="city" value="New York" />
+ </bean>
+ 
+ <!-- By Name -->
+ <!-- <bean class="com.springcore.auto.wire.Emp" name="emp1" autowire="byName" /> -->
+ 
+ <!-- By Type -->
+ <!-- <bean class="com.springcore.auto.wire.Emp" name="emp1" autowire="byType" /> -->
+ 
+ <!-- By Constructor method -->
+ <bean class="com.springcore.auto.wire.Emp" name="emp1" autowire="constructor" />
+  
 </beans>
